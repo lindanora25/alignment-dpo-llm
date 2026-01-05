@@ -187,6 +187,24 @@ python src/evaluation/eval_preference_accuracy.py \
   - SFT excels at strict formatting
   - DPO targets preference alignment (and can improve it)
 
+## Data & large files (GitHub size limits)
+
+Some large processed datasets are **not committed** to the repo because GitHub blocks files >100MB (e.g., `data/processed/sft_dataset.json`, `data/processed/dpo_dataset.json`).
+
+### Regenerate processed datasets
+
+From the repo root:
+
+```bash
+python src/data/prepare_sft_data.py
+python src/data/prepare_dpo_data.py
+
+```
+
+```md
+Raw source dataset: `argilla/ultrafeedback-binarized-preferences-cleaned` (via Hugging Face Datasets).
+```
+
 ## Demo (Gradio replay — no GPU required)
 
 This demo replays saved generations from `artifacts/example_generations.json`.
