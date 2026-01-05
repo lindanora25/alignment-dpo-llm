@@ -1,0 +1,33 @@
+# ---- Python ----
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.ipynb_checkpoints/
+.venv/
+venv/
+.env
+
+# ---- OS / editors ----
+.DS_Store
+Thumbs.db
+.vscode/
+
+# ---- Large training artifacts (DO NOT COMMIT) ----
+models/
+# If you want to keep README files inside models, remove the line above
+# and instead ignore checkpoints only:
+# models/**/checkpoint-*/
+# models/**/optimizer.pt
+# models/**/scheduler.pt
+# models/**/rng_state.pth
+# models/**/trainer_state.json
+# models/**/training_args.bin
+
+# ---- Local outputs ----
+artifacts/*.tmp
+artifacts/*.log
+.gradio/
+
+# Large processed datasets (regenerate via scripts)
+data/processed/*.json
